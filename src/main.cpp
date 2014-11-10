@@ -40,7 +40,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x0e286802e2a399cad2f4a6e41f0584a162dddfb303b78839b690e77dee2310e1");
+uint256 hashGenesisBlock("b8d969cd845520b1cd7318b219eccf0b32822de315b99c26a1f7adcdfb6d8f79");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // LitecoinDark: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2716,7 +2716,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
-        hashGenesisBlock = uint256("0x0e286802e2a399cad2f4a6e41f0584a162dddfb303b78839b690e77dee2310e1");
+        hashGenesisBlock = uint256("b8d969cd845520b1cd7318b219eccf0b32822de315b99c26a1f7adcdfb6d8f79");
     }
 
     //
@@ -2775,7 +2775,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0xdf5d4cddc97c45da161f81032af08c18a6b7caecf0fb13d416108d61872cb618"));
+        assert(block.hashMerkleRoot == uint256("1271640210d8bf0aa320a99aba1b8f7a5cd80a2bd51b361893851c00fa9ee7e9"));
         block.print();
         assert(hash == hashGenesisBlock);
 
